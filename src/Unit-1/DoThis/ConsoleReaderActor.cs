@@ -9,46 +9,32 @@ namespace WinTail
     /// </summary>
     class ConsoleReaderActor : UntypedActor
     {
-        public const string ExitCommand = "exit";
         public const string StartCommand = "start";
-        private readonly IActorRef _validationActor;
-        
-        public ConsoleReaderActor(IActorRef validationActor)
+        public const string ExitCommand = "exit";
+        private IActorRef _consoleWriterActor;
+
+        public ConsoleReaderActor(IActorRef consoleWriterActor)
         {
             _validationActor = validationActor;
         }
 
         protected override void OnReceive(object message)
         {
-            if (message.Equals(StartCommand))
+            var read = Console.ReadLine();
+            if (!string.IsNullOrEmpty(read) && String.Equals(read, ExitCommand, StringComparison.OrdinalIgnoreCase))
             {
-                DoPrintInstructions();
-            }
-
-            GetAndValidateInput();
-        }
-
-        #region Internal methods
-        private void DoPrintInstructions()
-        {
-            Console.WriteLine("Write whatever you want into the console!");
-            Console.WriteLine("Some entries will pass validation, and some won't...\n\n");
-            Console.WriteLine("Type 'exit' to quit this application at any time.\n");
-        }
-
-        private void GetAndValidateInput()
-        {
-            var message = Console.ReadLine();
-
-            if (string.IsNullOrEmpty(message) == false && string.Equals(message, ExitCommand, StringComparison.OrdinalIgnoreCase))
-            {
+                // shut down the system (acquire handle to system via
+                // this actors context)
                 Context.System.Terminate();
                 return;
             }
 
-            _validationActor.Tell(message);
+            // send input to the console writer to process and print
+            // YOU NEED TO FILL IN HERE
+
+            // continue reading messages from the console
+            // YOU NEED TO FILL IN HERE
         }
-#endregion
 
     }
 }
