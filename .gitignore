@@ -182,5 +182,18 @@ UpgradeLog*.htm
 
 # Microsoft Fakes
 FakesAssemblies/
+<<<<<<< HEAD
 /src/Unit-1/DoThis/.vs/WinTail/v15/Server/sqlite3
 /src/Unit-2/DoThis/.vs/SystemCharting/v15/Server/sqlite3
+=======
+/src/Unit-1/DoThis/.vs/WinTail/v15/Server/sqlite3/storage.ide-wal
+/src/Unit-1/DoThis/.vs/WinTail/v15/Server/sqlite3/storage.ide-shm
+/src/Unit-1/DoThis/.vs/WinTail/v15/Server/sqlite3/storage.ide
+/src/Unit-1/DoThis/.vs/WinTail/v15/Server/sqlite3/db.lock
+/.vs/VSWorkspaceState.json
+/.vs/slnx.sqlite
+/src/Unit-2/DoThis/.vs/SystemCharting/v15/Server/sqlite3/storage.ide-wal
+/src/Unit-2/DoThis/.vs/SystemCharting/v15/Server/sqlite3/storage.ide-shm
+/src/Unit-2/DoThis/.vs/SystemCharting/v15/Server/sqlite3/storage.ide
+/src/Unit-2/DoThis/.vs/SystemCharting/v15/Server/sqlite3/db.lock
+>>>>>>> efe1bb6303d9ba8351aaff4f7d4e0827bc6709ca

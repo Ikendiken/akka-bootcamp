@@ -40,6 +40,22 @@ namespace ChartApp
             Program.ChartActors.Terminate();
         }
 
+
         #endregion
+
+        private void ButtonCpuClick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ButtonMemoryClick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ButtonDiskClick(object sender, EventArgs e)
+        {
+
+        }
     }
 }
